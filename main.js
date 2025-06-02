@@ -9,7 +9,7 @@ let adviceData= async ()=>{
     let API = await  fetch("https://api.adviceslip.com/advice");
     let convertedData= await API.json();
     loading.classList.add("hidden");
-     adviceID.textContent = `A D V I C E ${convertedData.slip.id}`;
+     adviceID.textContent = `A D V I C E #${convertedData.slip.id}`;
      quotesText.textContent = `"${convertedData.slip.advice}"`;
 };
 
